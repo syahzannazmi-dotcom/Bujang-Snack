@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - BUJANG SNACK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #c45b00;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+    }
+
+    nav a.active {
+      color: #c45b00;
+    }
+
+    .contact-hero {
+      background-color: #d97706;
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .contact-hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .contact-hero p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 50px 10%;
+    }
+
+    .contact-form, .contact-info {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 420px;
+    }
+
+    .contact-form h3, .contact-info h3 {
+      color: #c45b00;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input, .contact-form textarea, .contact-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-form button {
+      background-color: #c45b00;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 600;
+    }
+
+    .contact-form button:hover {
+      background-color: #a64a00;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    .info-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .info-box i {
+      color: #c45b00;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .social-links div {
+      background: #f8f8f8;
+      padding: 12px 15px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .social-links div:hover {
+      background-color: #fff4e6;
+    }
+
+    .whatsapp-footer {
+      background-color: #16a34a;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .whatsapp-footer i {
+      color: #fff;
+      font-size: 28px;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">BUJANG SNACK</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-hero">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for orders, inquiries, or just to say hello!</p>
+  </section>
+
+  <div class="contact-container">
+    <div class="contact-form">
+      <h3>Send us a Message</h3>
+      <form>
+        <input type="text" placeholder="Full Name *" required>
+        <input type="email" placeholder="Email Address *" required>
+        <input type="text" placeholder="Phone Number">
+        <select required>
+          <option value="">Select a subject</option>
+          <option>Order Inquiry</option>
+          <option>Feedback</option>
+          <option>Collaboration</option>
+        </select>
+        <textarea placeholder="Tell us how we can help..." rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <div class="info-box">
+        <i class="fas fa-phone-alt"></i>
+        <p><strong>+60 17-206 6180</strong><br>Call us for immediate assistance</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-envelope"></i>
+        <p><strong>bujangsnack@gmail.com</strong><br>Send us your inquiries</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-clock"></i>
+        <p><strong>Mon - Sat: 9AM - 6PM</strong><br>Sunday Closed</p>
+      </div>
+
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <div>Instagram <i class="fab fa-instagram"></i></div>
+        <div>TikTok <i class="fab fa-tiktok"></i></div>
+        <div>Shopee <i class="fas fa-shopping-bag"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="whatsapp-footer">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+
+  <footer>
+    <p>© 2025 BUJANG SNACK — Citarasa Generasi</p>
+  </footer>
+</body>
+</html>

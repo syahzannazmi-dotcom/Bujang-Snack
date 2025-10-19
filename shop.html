@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - BUJANG SNACK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fffefb;
+      color: #4a2e1f;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 50px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header .logo {
+      font-weight: 700;
+      font-size: 22px;
+      color: #5a3c2a;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #5a3c2a;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #f2994a;
+    }
+
+    /* HERO SECTION */
+    .shop-hero {
+      background-color: #d97706;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    .shop-hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .shop-hero p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* FILTER BUTTONS */
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 40px 0;
+    }
+
+    .filter-buttons button {
+      padding: 10px 22px;
+      border-radius: 25px;
+      border: none;
+      background-color: #f3f3f3;
+      color: #4a2e1f;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filter-buttons button.active {
+      background-color: #f2994a;
+      color: #fff;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #f7b66b;
+      color: #fff;
+    }
+
+    /* PRODUCT GRID */
+    .shop-box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 0 50px 80px;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 270px;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 20px;
+    }
+
+    .product-content h3 {
+      margin: 0 0 8px;
+      color: #4a2e1f;
+    }
+
+    .product-content p {
+      font-size: 14px;
+      color: #6e4d3b;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: 700;
+      color: #f2994a;
+      margin-bottom: 10px;
+    }
+
+    .btn-detail {
+      display: inline-block;
+      padding: 8px 18px;
+      background: #f2994a;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-detail:hover {
+      background: #d98238;
+    }
+
+    /* TRY FLAVORS SECTION */
+    .flavor-section {
+      background: #fff8ec;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .flavor-section h3 {
+      color: #4a2e1f;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .flavor-section p {
+      color: #6e4d3b;
+      margin-bottom: 25px;
+    }
+
+    .flavor-section .btn-primary {
+      background: #f2994a;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .flavor-section .btn-primary:hover {
+      background: #d98238;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 25px;
+      color: #8a6e56;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">BUJANG SNACK</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="shop-hero">
+    <h2>Our Products</h2>
+    <p>Discover our authentic collection of traditional Malaysian kuih peneram</p>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filter-buttons">
+    <button class="active" onclick="filterProducts('all')">All Products</button>
+    <button onclick="filterProducts('original')">Original</button>
+    <button onclick="filterProducts('flavored')">Flavored</button>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div class="shop-box">
+    <div class="product" data-category="original">
+      <img src="istockphoto-1490647124-170667a.jpg" alt="Original Peneram">
+      <div class="product-content">
+        <h3>Original Peneram</h3>
+        <p>Classic traditional recipe with authentic taste</p>
+        <p class="price">RM 15.00</p>
+        <a href="#" class="btn-detail">View Details</a>
+      </div>
+    </div>
+
+    <div class="product" data-category="flavored">
+      <img src="Gemini_Generated_Image_1s1nd1s1nd1s1nd1.png" alt="Matcha Peneram">
+      <div class="product-content">
+        <h3>Matcha Peneram</h3>
+        <p>Modern twist with premium matcha flavor</p>
+        <p class="price">RM 18.00</p>
+        <a href="#" class="btn-detail">View Details</a>
+      </div>
+    </div>
+
+    <div class="product" data-category="flavored">
+      <img src="Gemini_Generated_Image_8jz0ss8jz0ss8jz0.png" alt="Chocolate Peneram">
+      <div class="product-content">
+        <h3>Chocolate Peneram</h3>
+        <p>Rich chocolate flavor meets tradition</p>
+        <p class="price">RM 18.00</p>
+        <a href="#" class="btn-detail">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLAVOR SECTION -->
+  <section class="flavor-section">
+    <h3>Try Our Delicious Flavors</h3>
+    <p>Experience the perfect blend of tradition and modern flavors</p>
+    <a href="shop.html" class="btn-primary">Shop All Products</a>
+  </section>
+
+  <footer>
+    <p>© 2025 BUJANG SNACK — Citarasa Generasi</p>
+  </footer>
+
+  <script>
+    // Filter function
+    function filterProducts(category) {
+      const products = document.querySelectorAll('.product');
+      const buttons = document.querySelectorAll('.filter-buttons button');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
